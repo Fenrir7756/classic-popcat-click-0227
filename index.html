@@ -84,13 +84,7 @@
     // 1. 計數器初始化
     let count = 0;
 
-  // 用id抓取文字的HTML元素
-    let p = document.getElementById("p");
-
-  //顯示計數器的數字
-    p.innerHTML = count;
-
-  // 2. 寫一個function 計數器累加
+    // 2. 寫一個function 計數器累加
     function addCount() {
       count+=1;
     }
@@ -100,18 +94,15 @@
       addCount();
     });
 
+    // 用id抓取文字的HTML元素
+    let p = document.getElementById("p");
 
-  // 註冊滑鼠按下的時候，更新計數器的顯示
+    //顯示計數器的數字
+    p.innerHTML = count;
+
+    // 註冊滑鼠按下的時候，更新計數器的顯示
     document.addEventListener("mousedown", function() {
       p.innerHTML = count;
-    });
-
-  //註冊滑鼠放開的事件，切換張嘴圖片
-    function switchImg() {
-      p.id = "op";
-    }
-    document.addEventListener("mouseup", function() {
-      switchImg();
     });
 
     //當滑鼠按下，切換張嘴圖片
@@ -120,10 +111,17 @@
     });
 
 
+    //註冊滑鼠放開的事件，切換張嘴圖片
+    function switchImg() {
+      p.id = "op";
+    }
+    document.addEventListener("mouseup", function() {
+      switchImg();
+    });
+
   //當滑鼠按下，播放 pops/pop1.mp3
   let audio = new Audio("pops/pop1.mp3");
       audio.play();
-
 
 
 
