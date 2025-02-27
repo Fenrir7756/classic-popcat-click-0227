@@ -100,6 +100,7 @@
       addCount();
     });
 
+
   // 註冊滑鼠按下的時候，更新計數器的顯示
     document.addEventListener("mousedown", function() {
       p.innerHTML = count;
@@ -112,6 +113,12 @@
     document.addEventListener("mouseup", function() {
       switchImg();
     });
+
+    //當滑鼠按下，切換張嘴圖片
+    document.addEventListener("mousedown", function() {
+      switchImg();
+    });
+
 
   //當滑鼠按下，播放 pops/pop1.mp3
   let audio = new Audio("pops/pop1.mp3");
