@@ -4,7 +4,18 @@
 <head>
   <title>POPCAT CLASSIC</title>
   <style>
-    /*容器 box 高度100vh flex排版方向column 水平置中 不要垂直置中*/
+
+    /*body box 編距為08*/
+    body {
+      margin: 0;
+    }
+
+    /*字型 sans-serif*/
+    body {
+        font-family: sans-serif;
+    }
+
+      /*容器 box 高度100vh flex排版方向column 水平置中 不要垂直置中*/
 
     .container {
       display: flex;
@@ -25,10 +36,24 @@
     }
 
 
-
     /*文字 box 寬度100%*/
     .cat-img{
-      width: 100%;
+      width: 100%;}
+
+    /*文字 box 最大寬度 800px*/
+    .cat-img {
+      max-width: 800px;
+    }
+
+
+    /*防止文字被選取*/
+    .cat-img {
+      user-select: none;
+    }
+
+    /*文字 div 排版填滿剩餘空間*/
+    .cat-img {
+      flex-grow: 1;
     }
 
     /*文字樣式 文字置中 文字白色 大小80px -webkit-text-stroke 3px 黑色*/
@@ -47,6 +72,14 @@
       background-repeat: no-repeat;
     }
 
+    /*新贈文字 div 背景圖片 用 id 設定 imgs/op.png*/
+
+    #op{
+      background-image: url('imgs/op.png');
+      background-position: bottom;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
 
   </style>
 
