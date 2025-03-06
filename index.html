@@ -124,6 +124,34 @@
       audio.play();
 
 
+    //用 javascript 預載張嘴圖片 op.png
+    let img = new Image();
+    img.src = "imgs/op.png";
+
+    //除了滑鼠，也可以用鍵盤互動
+    document.addEventListener("keydown", function() {
+      addCount();
+      p.innerHTML = count;
+      switchImg();
+      audio.play();
+    });
+
+    //滑鼠放開後，等待 25 毫秒，再切回閉嘴圖片
+    document.addEventListener("mouseup", function() {
+      setTimeout(function() {
+        p.id = "p";
+      }, 25);
+    });
+
+    //當滑鼠按下，可以輪流播放 pop1-4 的 mp3
+    let audio = new Audio("pops/pop1.mp3");
+
+    //可以紀錄上次的點擊數 (用 cookie) 設定名稱 過期時間一年
+    document.cookie = "count=" + count + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+
+
+
+
 
 </script>
 
